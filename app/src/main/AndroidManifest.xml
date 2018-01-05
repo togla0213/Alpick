@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yalantis.com.sidemenu.sample">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/alpick_icon"
+        android:label="Alpick"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Alpick" />
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Alpick">
+
+        </activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".ThemeActivity" />
+        <activity android:name=".BookActivity" />
+        <activity android:name=".DicActivity" />
+        <activity android:name=".MypageActivity" />
+        <activity android:name=".LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Alpick">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignupActivity"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
