@@ -39,7 +39,7 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_theme);
 
-        contentFragment = ContentFragment.newInstance(R.drawable.content_music);
+        contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.theme_frame, contentFragment)
                 .commit();
@@ -143,7 +143,7 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
 
         //findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
-        ContentFragment contentFragment = ContentFragment.newInstance(this.res);
+        ContentFragment contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.theme_frame, contentFragment).commit();
         return contentFragment;
     }

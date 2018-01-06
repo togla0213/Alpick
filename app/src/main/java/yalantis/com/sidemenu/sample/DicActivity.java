@@ -39,7 +39,7 @@ public class DicActivity extends AppCompatActivity implements ViewAnimator.ViewA
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dic);
 
-        contentFragment = ContentFragment.newInstance(R.drawable.content_music);
+        contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.dic_frame, contentFragment)
                 .commit();
@@ -143,7 +143,7 @@ public class DicActivity extends AppCompatActivity implements ViewAnimator.ViewA
 
         //findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
-        ContentFragment contentFragment = ContentFragment.newInstance(this.res);
+        ContentFragment contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.dic_frame, contentFragment).commit();
         return contentFragment;
     }

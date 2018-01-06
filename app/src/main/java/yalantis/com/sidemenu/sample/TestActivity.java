@@ -39,7 +39,7 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
-        contentFragment = ContentFragment.newInstance(R.drawable.content_music);
+        contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.test_frame, contentFragment)
                 .commit();
@@ -143,7 +143,7 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
 
         //findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
-        ContentFragment contentFragment = ContentFragment.newInstance(this.res);
+        ContentFragment contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.test_frame, contentFragment).commit();
         return contentFragment;
     }

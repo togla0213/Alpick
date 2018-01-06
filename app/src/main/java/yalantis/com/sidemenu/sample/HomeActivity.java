@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -36,12 +37,16 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
+    private Button btn_test;
+    private Button btn_theme;
+    private Button btn_book;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        contentFragment = ContentFragment.newInstance(R.drawable.content_music);
+        contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.home_frame, contentFragment)
                 .commit();
@@ -55,10 +60,37 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
             }
         });
 
-
         setActionBar();
         createMenuList();
         viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
+
+        btn_test = (Button)findViewById(R.id.home_btn_test);
+        btn_theme = (Button)findViewById(R.id.home_btn_theme);
+        btn_book = (Button)findViewById(R.id.home_btn_book);
+
+        btn_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_main = new Intent(HomeActivity.this, TestActivity.class);
+                startActivity(it_main);
+            }
+        });
+
+        btn_theme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_main = new Intent(HomeActivity.this, ThemeActivity.class);
+                startActivity(it_main);
+            }
+        });
+
+        btn_book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_main = new Intent(HomeActivity.this, BookActivity.class);
+                startActivity(it_main);
+            }
+        });
     }
 
     private void createMenuList() {
@@ -82,8 +114,6 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
     private void setActionBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.home_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Alpick");
-        getSupportActionBar().setIcon(R.drawable.alpick_icon_re);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         drawerToggle = new ActionBarDrawerToggle(
@@ -145,7 +175,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
 
         //findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
-        ContentFragment contentFragment = ContentFragment.newInstance(this.res);
+        ContentFragment contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.home_frame, contentFragment).commit();
         return contentFragment;
     }

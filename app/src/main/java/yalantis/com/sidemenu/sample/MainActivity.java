@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        contentFragment = ContentFragment.newInstance(R.drawable.content_music);
+        contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, contentFragment)
                 .commit();
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
 
         findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
-        ContentFragment contentFragment = ContentFragment.newInstance(this.res);
+        ContentFragment contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, contentFragment).commit();
         return contentFragment;
     }

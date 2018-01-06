@@ -30,10 +30,10 @@ public class ContentFragment extends Fragment implements ScreenShotable {
     protected int res;
     private Bitmap bitmap;
 
-    public static ContentFragment newInstance(int resId) {
+    public static ContentFragment newInstance() {
         ContentFragment contentFragment = new ContentFragment();
         Bundle bundle = new Bundle();
-        bundle.putInt(Integer.class.getName(), resId);
+        //bundle.putInt(Integer.class.getName(), R.drawable.content_films);
         contentFragment.setArguments(bundle);
         return contentFragment;
     }
