@@ -6,21 +6,22 @@
         android:allowBackup="true"
         android:icon="@drawable/alpick_icon"
         android:label=""
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true" >
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize" />
         <activity
             android:name=".HomeActivity"
-            android:configChanges="orientation|screenSize">
-
-        </activity>
+            android:configChanges="orientation|screenSize" />
         <activity android:name=".TestActivity" />
         <activity android:name=".ThemeActivity" />
         <activity android:name=".BookActivity" />
         <activity android:name=".DicActivity" />
         <activity android:name=".MypageActivity" />
-        <activity android:name=".LoginActivity"
+        <activity
+            android:name=".LoginActivity"
             android:configChanges="orientation|screenSize"
             android:label="Alpick">
             <intent-filter>
@@ -29,11 +30,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".TestStartActivity" />
+        <activity android:name=".TestResultActivity"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -33,6 +34,10 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
     private ViewAnimator viewAnimator;
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
+
+    private Button btn_menu1;
+    private Button btn_menu2;
+    private Button btn_menu3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +62,34 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
         setActionBar();
         createMenuList();
         viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
+
+        btn_menu1 = (Button)findViewById(R.id.test_btn_menu1);
+        btn_menu2 = (Button)findViewById(R.id.test_btn_menu2);
+        btn_menu3 = (Button)findViewById(R.id.test_btn_menu3);
+
+        btn_menu1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_main = new Intent(TestActivity.this, TestStartActivity.class);
+                startActivity(it_main);
+            }
+        });
+
+        btn_menu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_main = new Intent(TestActivity.this, TestStartActivity.class);
+                startActivity(it_main);
+            }
+        });
+
+        btn_menu3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it_main = new Intent(TestActivity.this, TestStartActivity.class);
+                startActivity(it_main);
+            }
+        });
     }
 
     private void createMenuList() {
@@ -80,8 +113,6 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
     private void setActionBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.test_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Alpick");
-        getSupportActionBar().setIcon(R.drawable.alpick_icon_re);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         drawerToggle = new ActionBarDrawerToggle(

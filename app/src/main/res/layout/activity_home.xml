@@ -18,7 +18,8 @@
             <LinearLayout
                 android:id="@+id/home_frame"
                 android:layout_width="match_parent"
-                android:layout_height="368dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="56dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -35,6 +36,14 @@
                 android:textColor="@android:color/black"
                 android:textSize="30sp" />
 
+            <ImageView
+                android:id="@+id/home_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="56dp"
+                 android:scaleType="fitXY"
+                app:srcCompat="@drawable/main_back" />
+
             <ScrollView
                 android:id="@+id/home_main"
                 android:layout_width="match_parent"
@@ -49,9 +58,18 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:id="@+id/txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/main_txt_top" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/black"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -78,19 +96,19 @@
                         android:id="@+id/home_btn_test"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
-                        android:background="@drawable/home_test" />
+                        android:background="@drawable/test_menu1" />
 
                     <Button
                         android:id="@+id/home_btn_theme"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
-                        android:background="@drawable/home_theme" />
+                        android:background="@drawable/main_theme" />
 
                     <Button
                         android:id="@+id/home_btn_book"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
-                        android:background="@drawable/home_book" />
+                        android:background="@drawable/main_book" />
 
                 </LinearLayout>
             </ScrollView>
