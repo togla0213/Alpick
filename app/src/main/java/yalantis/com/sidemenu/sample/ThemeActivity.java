@@ -80,8 +80,6 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
     private void setActionBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.theme_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Alpick");
-        getSupportActionBar().setIcon(R.drawable.alpick_icon_re);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         drawerToggle = new ActionBarDrawerToggle(
