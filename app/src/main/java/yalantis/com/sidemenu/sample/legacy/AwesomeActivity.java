@@ -10,6 +10,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import yalantis.com.sidemenu.sample.R;
+import yalantis.com.sidemenu.sample.fragment.HomeFragment;
 
 /**
  * @author Adil Soomro
@@ -23,7 +24,7 @@ public class AwesomeActivity extends TabActivity {
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_book);
 		tabHost = getTabHost();
 		setTabs();
 	}
@@ -31,7 +32,7 @@ public class AwesomeActivity extends TabActivity {
 	{
 		addTab("soju", R.drawable.sojucol, soju.class);
 		addTab("beer", R.drawable.beercol, beer.class);
-		addTab("Fake", R.drawable.tab_search, SearchActivity.class);
+		addTab("Fake", R.drawable.tab_search, beer.class);
 		addTab("wine", R.drawable.winecol, wine.class);
 		addTab("cognac", R.drawable.cognaccol, cognac.class);
 	}

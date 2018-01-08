@@ -1,1 +1,24 @@
-<resources></resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/theme_color_primary</item>
+        <item name="colorPrimaryDark">@color/theme_color_primary_light</item>
+        <item name="colorAccent">@color/theme_color_accent</item>
+
+        <item name="android:actionBarStyle">@style/AppActionBarStyle</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/AppActionBarStyle</item>
+
+
+    </style>
+    <style name="AppActionBarStyle"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/theme_color_primary</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/theme_color_primary</item>
+    </style>
+</resources>

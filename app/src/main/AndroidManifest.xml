@@ -35,17 +35,16 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
+        <activity
+            android:name=".legacy.AwesomeActivity"
+            android:theme="@style/app_legacy_theme"></activity>
         <activity android:name=".TestStartActivity" />
         <activity android:name=".TestResultActivity" />
         <activity android:name=".legacy.soju" />
         <activity android:name=".legacy.beer" />
         <activity android:name=".legacy.wine" />
         <activity android:name=".legacy.cognac" />
-        <activity android:name=".fragment.sojuFrag" />
-        <activity android:name=".fragment.beerFrag" />
-        <activity android:name=".fragment.wineFrag" />
-        <activity android:name=".fragment.cogFrag"></activity>
+
     </application>
 
 </manifest>

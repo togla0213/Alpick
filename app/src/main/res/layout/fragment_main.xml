@@ -10,11 +10,11 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:scaleType="fitXY"
             android:id="@+id/image_content"
-            android:src="@drawable/content_films"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/content_films" />
 
     </FrameLayout>
 </io.codetail.widget.RevealFrameLayout>
