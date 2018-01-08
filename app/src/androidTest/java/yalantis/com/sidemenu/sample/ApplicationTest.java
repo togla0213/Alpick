@@ -1,4 +1,4 @@
-package yalantis.com.sidemenu;
+package yalantis.com.sidemenu.sample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

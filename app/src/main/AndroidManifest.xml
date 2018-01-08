@@ -4,13 +4,13 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@drawable/alpick_icon"
         android:label=""
-        android:theme="@style/AppTheme"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true" >
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".No"
             android:configChanges="orientation|screenSize" />
         <activity
             android:name=".HomeActivity"
@@ -37,7 +37,15 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".TestStartActivity" />
-        <activity android:name=".TestResultActivity"></activity>
+        <activity android:name=".TestResultActivity" />
+        <activity android:name=".legacy.soju" />
+        <activity android:name=".legacy.beer" />
+        <activity android:name=".legacy.wine" />
+        <activity android:name=".legacy.cognac" />
+        <activity android:name=".fragment.sojuFrag" />
+        <activity android:name=".fragment.beerFrag" />
+        <activity android:name=".fragment.wineFrag" />
+        <activity android:name=".fragment.cogFrag"></activity>
     </application>
 
 </manifest>

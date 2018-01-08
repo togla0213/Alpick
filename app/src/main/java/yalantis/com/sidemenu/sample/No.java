@@ -29,7 +29,7 @@ import yalantis.com.sidemenu.sample.fragment.ContentFragment;
 import yalantis.com.sidemenu.util.ViewAnimator;
 
 
-public class MainActivity extends AppCompatActivity implements ViewAnimator.ViewAnimatorListener {
+public class No extends AppCompatActivity implements ViewAnimator.ViewAnimatorListener {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private List<SlideMenuItem> list = new ArrayList<>();
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(MainActivity.this, HomeActivity.class);
+        Intent it_main = new Intent(No.this, HomeActivity.class);
         it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(it_main);
 
@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(MainActivity.this, MainActivity.class);
+        Intent it_main = new Intent(No.this, No.class);
         it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(it_main);
 
@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements ViewAnimator.View
 
     @Override
     public ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position) {
-        Log.v("MenuItem : ", slideMenuItem.getName());
+        Log.v("MenuItem : ", slideMenuItem.getName( ));
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
                 return screenShotable;
