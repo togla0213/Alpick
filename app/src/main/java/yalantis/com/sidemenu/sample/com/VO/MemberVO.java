@@ -60,6 +60,4 @@ public class MemberVO {
         this.year = year;
         this.user_type = user_type;
     }
-
-
 }

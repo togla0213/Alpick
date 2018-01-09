@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         btn_test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it_main = new Intent(HomeActivity.this, TestActivity.class);
+                Intent it_main = new Intent(HomeActivity.this, TestStartActivity.class);
                 startActivity(it_main);
             }
         });

@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="yalantis.com.sidemenu.sample.GradeWineActivity"
+    tools:context="yalantis.com.sidemenu.sample.GradeCognacActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -26,14 +26,14 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/img_wine01"
+                    android:id="@+id/img_cognac01"
                     android:layout_width="10dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0001" />
+                    app:srcCompat="@drawable/a04_0001" />
 
                 <RatingBar
-                    android:id="@+id/bar_wine01"
+                    android:id="@+id/bar_cognac01"
                     style="@style/Widget.AppCompat.RatingBar.Indicator"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
@@ -43,57 +43,14 @@
                     android:stepSize="1" />
 
                 <ImageView
-                    android:id="@+id/img_wine02"
+                    android:id="@+id/img_cognac02"
                     android:layout_width="10dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0002" />
+                    app:srcCompat="@drawable/a04_0002" />
 
                 <RatingBar
-                    android:id="@+id/bar_wine02"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:isIndicator="false"
-                    android:numStars="5"
-                    android:stepSize="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/img_wine03"
-                    android:layout_width="10dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0003" />
-
-                <RatingBar
-                    android:id="@+id/bar_wine03"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:isIndicator="false"
-                    android:numStars="5"
-                    android:stepSize="1" />
-
-                <ImageView
-                    android:id="@+id/img_wine04"
-                    android:layout_width="10dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0004" />
-
-                <RatingBar
-                    android:id="@+id/bar_wine04"
+                    android:id="@+id/bar_cognac02"
                     style="@style/Widget.AppCompat.RatingBar.Indicator"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
@@ -112,14 +69,14 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/img_wine05"
+                    android:id="@+id/img_cognac03"
                     android:layout_width="10dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0005" />
+                    app:srcCompat="@drawable/a04_0003" />
 
                 <RatingBar
-                    android:id="@+id/bar_wine05"
+                    android:id="@+id/bar_cognac03"
                     style="@style/Widget.AppCompat.RatingBar.Indicator"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
@@ -129,57 +86,14 @@
                     android:stepSize="1" />
 
                 <ImageView
-                    android:id="@+id/img_wine06"
+                    android:id="@+id/img_cognac04"
                     android:layout_width="10dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0006" />
+                    app:srcCompat="@drawable/a04_0004" />
 
                 <RatingBar
-                    android:id="@+id/bar_wine06"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:isIndicator="false"
-                    android:numStars="5"
-                    android:stepSize="1" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/img_wine07"
-                    android:layout_width="10dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0007" />
-
-                <RatingBar
-                    android:id="@+id/bar_wine07"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:isIndicator="false"
-                    android:numStars="5"
-                    android:stepSize="1" />
-
-                <ImageView
-                    android:id="@+id/img_wine08"
-                    android:layout_width="10dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0008" />
-
-                <RatingBar
-                    android:id="@+id/bar_wine08"
+                    android:id="@+id/bar_cognac04"
                     style="@style/Widget.AppCompat.RatingBar.Indicator"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
@@ -198,14 +112,14 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/img_wine09"
+                    android:id="@+id/img_cognac05"
                     android:layout_width="10dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0009" />
+                    app:srcCompat="@drawable/a04_0005" />
 
                 <RatingBar
-                    android:id="@+id/bar_wine09"
+                    android:id="@+id/bar_cognac05"
                     style="@style/Widget.AppCompat.RatingBar.Indicator"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
@@ -215,14 +129,57 @@
                     android:stepSize="1" />
 
                 <ImageView
-                    android:id="@+id/img_wine10"
+                    android:id="@+id/img_cognac06"
                     android:layout_width="10dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0010" />
+                    app:srcCompat="@drawable/a04_0006" />
 
                 <RatingBar
-                    android:id="@+id/bar_wine10"
+                    android:id="@+id/bar_cognac06"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_cognac07"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a04_0007" />
+
+                <RatingBar
+                    android:id="@+id/bar_cognac07"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_cognac08"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a04_0008" />
+
+                <RatingBar
+                    android:id="@+id/bar_cognac08"
                     style="@style/Widget.AppCompat.RatingBar.Indicator"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
@@ -234,10 +191,11 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/wine_next"
+                android:id="@+id/cognac_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="290dp"
+                android:layout_weight="1"
                 android:text="NEXT" />
 
         </LinearLayout>

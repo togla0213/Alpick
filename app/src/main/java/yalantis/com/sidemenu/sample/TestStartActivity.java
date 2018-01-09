@@ -48,6 +48,7 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
                                          R.drawable.mbti_jp_p1, R.drawable.mbti_jp_p2, R.drawable.mbti_jp_p3};
 
     private int i = 0;
+    private StringBuffer answer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,19 +75,30 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
 
         btn_choice1 = (Button)findViewById(R.id.test_start_btn1);
         btn_choice2 = (Button)findViewById(R.id.test_start_btn2);
+        answer = new StringBuffer();
 
         btn_choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 i++;
+                if(i<=3) {
+                    answer.append("E");
+                } else if(i<=6){
+                    answer.append("N");
+                } else if(i<=9) {
+                    answer.append("F");
+                } else {
+                    answer.append("J");
+                }
                 if(i < choice1.length) {
                     btn_choice1.setBackgroundResource(choice1[i]);
                     btn_choice2.setBackgroundResource(choice2[i]);
                 } else if (i >= choice1.length) {
                     Intent it_main = new Intent(TestStartActivity.this, TestResultActivity.class);
-                    it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(it_main);
+                    finish();
                 }
+
             }
         });
 
@@ -94,13 +106,22 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
             @Override
             public void onClick(View v) {
                 i++;
+                if(i<=3) {
+                    answer.append("I");
+                } else if(i<=6){
+                    answer.append("S");
+                } else if(i<=9) {
+                    answer.append("T");
+                } else {
+                    answer.append("P");
+                }
                 if(i < choice1.length) {
                     btn_choice1.setBackgroundResource(choice1[i]);
                     btn_choice2.setBackgroundResource(choice2[i]);
                 } else if (i >= choice1.length) {
                     Intent it_main = new Intent(TestStartActivity.this, TestResultActivity.class);
-                    it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(it_main);
+                    finish();
                 }
             }
         });
@@ -278,5 +299,44 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
     public void addViewToContainer(View view) {
         linearLayout.addView(view);
     }
+
+    public String testing(StringBuffer str) {
+        String temp = str.toString();
+
+        String t_result = "";
+
+        if(getCharNumber(temp, 'E') > getCharNumber(temp, 'I')){
+            t_result += 'E';
+        } else {
+            t_result += 'I';
+        }
+        if(getCharNumber(temp, 'S') > getCharNumber(temp, 'N')){
+            t_result += 'S';
+        } else {
+            t_result += 'N';
+        }
+        if(getCharNumber(temp, 'T') > getCharNumber(temp, 'F')){
+            t_result += 'T';
+        } else {
+            t_result += 'F';
+        }
+        if(getCharNumber(temp, 'J') > getCharNumber(temp, 'P')){
+            t_result += 'J';
+        } else {
+            t_result += 'P';
+        }
+
+        return t_result;
+    }
+
+    public int getCharNumber(String str, char c) {
+        int count = 0;
+        for(int i=0;i<str.length();i++) {
+            if(str.charAt(i) == c)
+                count++;
+        }
+        return count;
+    }
+
 }
 

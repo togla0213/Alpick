@@ -51,7 +51,8 @@
         </activity>
         <activity android:name=".GradeSojuActivity" />
         <activity android:name=".GradeBeerActivity" />
-        <activity android:name=".GradeWineActivity"></activity>
+        <activity android:name=".GradeWineActivity" />
+        <activity android:name=".GradeCognacActivity"></activity>
     </application>
 
 </manifest>
