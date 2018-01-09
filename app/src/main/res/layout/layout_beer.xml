@@ -23,57 +23,57 @@
 
             <Button
                 android:id="@+id/beer34"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0001" />
 
             <Button
                 android:id="@+id/beer35"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0002" />
 
             <Button
                 android:id="@+id/beer36"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0003" />
 
             <Button
                 android:id="@+id/beer37"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0004" />
 
             <Button
                 android:id="@+id/beer38"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0005" />
 
             <Button
                 android:id="@+id/beer39"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0006" />
 
             <Button
                 android:id="@+id/beer40"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0007" />
 
             <Button
                 android:id="@+id/beer41"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0008" />
         </LinearLayout>
@@ -87,57 +87,57 @@
 
             <Button
                 android:id="@+id/beer16"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0009" />
 
             <Button
                 android:id="@+id/beer15"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0010" />
 
             <Button
                 android:id="@+id/beer14"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0011" />
 
             <Button
                 android:id="@+id/beer13"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0012" />
 
             <Button
                 android:id="@+id/beer12"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0013" />
 
             <Button
                 android:id="@+id/beer11"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0014" />
 
             <Button
                 android:id="@+id/beer10"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0015" />
 
             <Button
                 android:id="@+id/beer9"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0016" />
         </LinearLayout>
@@ -151,57 +151,57 @@
 
             <Button
                 android:id="@+id/beer24"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0017" />
 
             <Button
                 android:id="@+id/beer23"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0018" />
 
             <Button
                 android:id="@+id/beer22"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0019" />
 
             <Button
                 android:id="@+id/beer21"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0020" />
 
             <Button
                 android:id="@+id/beer20"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0021" />
 
             <Button
                 android:id="@+id/beer19"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0022" />
 
             <Button
                 android:id="@+id/beer18"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/n11_0023" />
 
             <Button
                 android:id="@+id/beer17"
-                android:layout_width="40dp"
-                android:layout_height="100dp"
+                android:layout_width="30dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/a01_0024" />
         </LinearLayout>

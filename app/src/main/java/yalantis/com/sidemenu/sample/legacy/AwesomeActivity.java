@@ -32,7 +32,7 @@ public class AwesomeActivity extends TabActivity {
 	{
 		addTab("soju", R.drawable.sojucol, soju.class);
 		addTab("beer", R.drawable.beercol, beer.class);
-		addTab("Fake", R.drawable.tab_search, beer.class);
+
 		addTab("wine", R.drawable.winecol, wine.class);
 		addTab("cognac", R.drawable.cognaccol, cognac.class);
 	}
