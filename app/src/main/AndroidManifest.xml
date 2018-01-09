@@ -24,27 +24,31 @@
             android:name=".LoginActivity"
             android:configChanges="orientation|screenSize"
             android:label="Alpick">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SignupActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
         <activity
             android:name=".legacy.AwesomeActivity"
-            android:theme="@style/app_legacy_theme"></activity>
+            android:theme="@style/app_legacy_theme" />
         <activity android:name=".TestStartActivity" />
         <activity android:name=".TestResultActivity" />
         <activity android:name=".legacy.soju" />
         <activity android:name=".legacy.beer" />
         <activity android:name=".legacy.wine" />
         <activity android:name=".legacy.cognac" />
+        <activity android:name=".ThemeNextActivity" />
+        <activity android:name=".LoadingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

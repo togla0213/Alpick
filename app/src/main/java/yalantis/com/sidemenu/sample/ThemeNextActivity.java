@@ -26,7 +26,7 @@ import yalantis.com.sidemenu.model.SlideMenuItem;
 import yalantis.com.sidemenu.sample.fragment.ContentFragment;
 import yalantis.com.sidemenu.util.ViewAnimator;
 
-public class ThemeActivity extends AppCompatActivity implements ViewAnimator.ViewAnimatorListener {
+public class ThemeNextActivity extends AppCompatActivity implements ViewAnimator.ViewAnimatorListener {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private List<SlideMenuItem> list = new ArrayList<>();
@@ -35,24 +35,18 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
-    private int[] btn_menu_id = {R.id.theme_btn_menu1_1, R.id.theme_btn_menu1_2, R.id.theme_btn_menu1_3,
-                                             R.id.theme_btn_menu2_1, R.id.theme_btn_menu2_2, R.id.theme_btn_menu2_3,
-                                             R.id.theme_btn_menu3_1, R.id.theme_btn_menu3_2, R.id.theme_btn_menu3_3, R.id.theme_btn_menu3_4};
-
-    private Button[] btn_menu = new Button[btn_menu_id.length];
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_theme);
+        setContentView(R.layout.activity_theme_next);
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.theme_frame, contentFragment)
+                .replace(R.id.themenext_frame, contentFragment)
                 .commit();
-        drawerLayout = (DrawerLayout) findViewById(R.id.theme_drawer_layout);
+        drawerLayout = (DrawerLayout) findViewById(R.id.themenext_drawer_layout);
         drawerLayout.setScrimColor(Color.TRANSPARENT);
-        linearLayout = (LinearLayout) findViewById(R.id.theme_left_drawer);
+        linearLayout = (LinearLayout) findViewById(R.id.themenext_left_drawer);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,21 +58,6 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
         setActionBar();
         createMenuList();
         viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
-
-        for (int i = 0; i < btn_menu.length; i++) {
-            btn_menu[i] = (Button)findViewById(btn_menu_id[i]);
-        }
-
-        for (int i = 0; i < btn_menu.length; i++) {
-            btn_menu[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent it_main = new Intent(ThemeActivity.this, ThemeNextActivity.class);
-                    startActivity(it_main);
-                }
-            });
-        }
-
     }
 
     private void createMenuList() {
@@ -100,7 +79,7 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
 
 
     private void setActionBar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.theme_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.themenext_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -155,7 +134,7 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
 
     private ScreenShotable replaceFragment(ScreenShotable screenShotable, int topPosition) {
         this.res = this.res == R.drawable.content_music ? R.drawable.content_films : R.drawable.content_music;
-        View view = findViewById(R.id.theme_frame);
+        View view = findViewById(R.id.themenext_frame);
         int finalRadius = Math.max(view.getWidth(), view.getHeight());
         SupportAnimator animator = ViewAnimationUtils.createCircularReveal(view, 0, topPosition, 0, finalRadius);
         animator.setInterpolator(new AccelerateInterpolator());
@@ -164,12 +143,12 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
         //findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
         ContentFragment contentFragment = ContentFragment.newInstance();
-        getSupportFragmentManager().beginTransaction().replace(R.id.theme_frame, contentFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.themenext_frame, contentFragment).commit();
         return contentFragment;
     }
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(ThemeActivity.this, HomeActivity.class);
+        Intent it_main = new Intent(ThemeNextActivity.this, HomeActivity.class);
         it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(it_main);
 
@@ -177,7 +156,7 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(ThemeActivity.this, TestActivity.class);
+        Intent it_main = new Intent(ThemeNextActivity.this, TestActivity.class);
         it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(it_main);
 
@@ -185,14 +164,15 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
     }
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(ThemeActivity.this, ThemeActivity.class);
+        Intent it_main = new Intent(ThemeNextActivity.this, ThemeActivity.class);
+        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(it_main);
 
         return screenShotable;
     }
 
     private ScreenShotable replaceBook(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(ThemeActivity.this, BookActivity.class);
+        Intent it_main = new Intent(ThemeNextActivity.this, BookActivity.class);
         it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(it_main);
 
@@ -200,7 +180,7 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
     }
 
     private ScreenShotable replaceDic(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(ThemeActivity.this, DicActivity.class);
+        Intent it_main = new Intent(ThemeNextActivity.this, DicActivity.class);
         it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(it_main);
 
@@ -208,7 +188,7 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
     }
 
     private ScreenShotable replaceMypage(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(ThemeActivity.this, MypageActivity.class);
+        Intent it_main = new Intent(ThemeNextActivity.this, MypageActivity.class);
         it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(it_main);
 
