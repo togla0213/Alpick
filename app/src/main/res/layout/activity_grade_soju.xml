@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="yalantis.com.sidemenu.sample.GradeSojuActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju01"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0001" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju01"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju02"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0002" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju02"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju03"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0003" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju03"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju04"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0004" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju04"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju05"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0005" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju05"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju06"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0006" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju06"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju07"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0007" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju07"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju08"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0008" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju08"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju09"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0009" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju09"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju10"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0010" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju10"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju11"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0011" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju11"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju12"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0012" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju12"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju13"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0013" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju13"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju14"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0014" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju14"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju15"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0015" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju15"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju16"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0016" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju16"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju17"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0017" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju17"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju18"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0018" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju18"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_soju19"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0019" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju19"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_soju20"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a02_0020" />
+
+                <RatingBar
+                    android:id="@+id/bar_soju20"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

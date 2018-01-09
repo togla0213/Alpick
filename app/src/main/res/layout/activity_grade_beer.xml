@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="yalantis.com.sidemenu.sample.GradebeerActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer01"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0001" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer01"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer02"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0002" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer02"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer03"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0003" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer03"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer04"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0004" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer04"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer05"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0005" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer05"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer06"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0006" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer06"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer07"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0007" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer07"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer08"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0008" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer08"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer09"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0009" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer09"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer10"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0010" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer10"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer11"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0011" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer11"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer12"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0012" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer12"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer13"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0013" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer13"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer14"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0014" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer14"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer15"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0015" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer15"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer16"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0016" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer16"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer17"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0017" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer17"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer18"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0018" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer18"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_beer19"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0019" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer19"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <ImageView
+                    android:id="@+id/img_beer20"
+                    android:layout_width="10dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/a01_0020" />
+
+                <RatingBar
+                    android:id="@+id/bar_beer20"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
