@@ -27,6 +27,7 @@ import java.lang.String;
 
 import yalantis.com.sidemenu.sample.com.VO.Al_dictVO;
 import yalantis.com.sidemenu.sample.com.VO.Al_infoVO;
+import yalantis.com.sidemenu.sample.com.VO.MemberVO;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText Id; // Button1 을 통해 서버로 보낼 데이터1
@@ -39,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
 
     ArrayList<Al_infoVO> info_list = null;
     ArrayList<Al_dictVO> dic_list = null;
+    MemberVO mvo = null;
     String fjresponse = null;
     String nick = null;
 
@@ -70,17 +72,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String response = "-1";
-
                 user_id = Id.getText().toString();
                 user_pw = Pw.getText().toString();
 
                 try {
-                    new HttpUtil().execute();
+                    HttpUtil hu = new HttpUtil();
+                    hu.execute();
                 } catch(Exception e) {
                     e.printStackTrace();
                 }
-
 
                 if(info_list!=null) {
                     Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
@@ -90,10 +90,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     public class HttpUtil extends AsyncTask<String, Void, String> {
+
+
 
         @Override
         protected String doInBackground(String... strings) {
@@ -139,8 +140,6 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             //res = response.toString();   //여기로 JSON값이 들어옴
 
-            Log.v("onPostExecute : ", "ㅇㅇ");
-
             Gson gson = new Gson();
             Type type1 = new TypeToken<ArrayList<Al_infoVO>>() {}.getType();
             Type type2 = new TypeToken<ArrayList<Al_dictVO>>() {}.getType();
@@ -152,8 +151,22 @@ public class LoginActivity extends AppCompatActivity {
 
             info_list = gson.fromJson(temp[1], type1);
             dic_list = gson.fromJson(temp[2], type2);
+            mvo = gson.fromJson(temp[3], new TypeToken<MemberVO>(){}.getType());
 
         }
+
+        public ArrayList<Al_infoVO> getInfo_list(){
+            return info_list;
+        }
+
+        public ArrayList<Al_dictVO> getDic_list() {
+            return dic_list;
+        }
+
+        public MemberVO getMvo() {
+            return mvo;
+        }
+
 
     }
 
