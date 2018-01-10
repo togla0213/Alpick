@@ -29,6 +29,7 @@
     </TabHost>
 
     <ImageButton
+        android:id="@+id/camera"
         android:layout_width="70sp"
         android:layout_height="70sp"
         android:layout_alignParentBottom="true"

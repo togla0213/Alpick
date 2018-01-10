@@ -22,6 +22,8 @@ import io.codetail.animation.ViewAnimationUtils;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 import yalantis.com.sidemenu.model.SlideMenuItem;
+import yalantis.com.sidemenu.sample.com.VO.Al_dictVO;
+import yalantis.com.sidemenu.sample.com.VO.MemberVO;
 import yalantis.com.sidemenu.sample.fragment.ContentFragment;
 import yalantis.com.sidemenu.util.ViewAnimator;
 
@@ -34,10 +36,17 @@ public class MypageActivity extends AppCompatActivity implements ViewAnimator.Vi
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
+    ArrayList<Al_dictVO> dic_list = LoginActivity.dic_list;
+    MemberVO mvo = LoginActivity.mvo;
+
+    private String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
+
+        userId = getIntent().getStringExtra("id");
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
@@ -148,40 +157,45 @@ public class MypageActivity extends AppCompatActivity implements ViewAnimator.Vi
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(MypageActivity.this, HomeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(MypageActivity.this, TestActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(MypageActivity.this, ThemeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceBook(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(MypageActivity.this, BookActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceDic(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(MypageActivity.this, DicActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
@@ -198,7 +212,7 @@ public class MypageActivity extends AppCompatActivity implements ViewAnimator.Vi
         Log.v("MenuItem : ", slideMenuItem.getName());
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
-            case ContentFragment.DIC:
+            case ContentFragment.MYPAGE:
                 return screenShotable;
             case ContentFragment.HOME:
                 return replaceHome(screenShotable, position);
@@ -208,8 +222,8 @@ public class MypageActivity extends AppCompatActivity implements ViewAnimator.Vi
                 return replaceBook(screenShotable, position);
             case ContentFragment.THEME:
                 return replaceTheme(screenShotable, position);
-            case ContentFragment.MYPAGE:
-                return replaceMypage(screenShotable, position);
+            case ContentFragment.DIC:
+                return replaceDic(screenShotable, position);
             default:
                 return replaceFragment(screenShotable, position);
         }

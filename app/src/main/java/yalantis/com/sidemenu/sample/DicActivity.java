@@ -34,10 +34,14 @@ public class DicActivity extends AppCompatActivity implements ViewAnimator.ViewA
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
+    private String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dic);
+
+        userId = getIntent().getStringExtra("id");
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
@@ -148,32 +152,36 @@ public class DicActivity extends AppCompatActivity implements ViewAnimator.ViewA
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(DicActivity.this, HomeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(DicActivity.this, TestActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(DicActivity.this, ThemeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceBook(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(DicActivity.this, BookActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
@@ -187,8 +195,9 @@ public class DicActivity extends AppCompatActivity implements ViewAnimator.ViewA
 
     private ScreenShotable replaceMypage(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(DicActivity.this, MypageActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }

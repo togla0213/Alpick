@@ -60,23 +60,25 @@ public class SignupActivity extends AppCompatActivity {
                 user_nick = nick.getText().toString();
                 user_year = year.getText().toString();
 
-                HttpUtil hu = null;
+
 
                 try {
 
-                    hu = new HttpUtil();
-                    hu.execute();
+                    new HttpUtil().execute();
 
+                    if(rr != null) {
+
+                        Intent intent = new Intent(SignupActivity.this, GradeSojuActivity.class);
+                        intent.putExtra("id", user_id);
+                        startActivity(intent);
+                        finish();
+
+                    }
                 } catch(Exception e) {
                     e.printStackTrace();
                 }
 
 
-                if(rr != null) {
-                    Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
             }
         });
     }
@@ -136,9 +138,7 @@ public class SignupActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             //res = response.toString();   //여기로 JSON값이 들어옴
 
-            Gson gson = new Gson();
-
-            rr = gson.fromJson(result, new TypeToken<String>(){}.getType());
+            rr = result;
 
         }
 

@@ -3,6 +3,7 @@ package yalantis.com.sidemenu.sample;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,16 @@ import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +34,8 @@ import io.codetail.animation.ViewAnimationUtils;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 import yalantis.com.sidemenu.model.SlideMenuItem;
+import yalantis.com.sidemenu.sample.com.VO.Al_dictVO;
+import yalantis.com.sidemenu.sample.com.VO.Al_infoVO;
 import yalantis.com.sidemenu.sample.fragment.ContentFragment;
 import yalantis.com.sidemenu.util.ViewAnimator;
 
@@ -49,11 +62,17 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
 
     private int i = 0;
     private StringBuffer answer = null;
+    private String userId;
+    private String user_type;
+    static String anl_res;
+    static String pro_no;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_start);
+
+        userId = getIntent().getStringExtra("id");
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
@@ -94,7 +113,27 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
                     btn_choice1.setBackgroundResource(choice1[i]);
                     btn_choice2.setBackgroundResource(choice2[i]);
                 } else if (i >= choice1.length) {
+                    user_type = testing(answer);
+
+                    if(user_type != null) {
+                        try {
+                            new HttpUtil().execute();
+
+                            Log.v("testing result : ", pro_no);
+
+                            Intent it_main = new Intent(TestStartActivity.this, TestResultActivity.class);
+                            startActivity(it_main);
+                            finish();
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
                     Intent it_main = new Intent(TestStartActivity.this, TestResultActivity.class);
+                    it_main.putExtra("id", userId);
+                    it_main.putExtra("pro_no", pro_no);
+                    it_main.putExtra("user_type", answer.toString());
                     startActivity(it_main);
                     finish();
                 }
@@ -119,9 +158,26 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
                     btn_choice1.setBackgroundResource(choice1[i]);
                     btn_choice2.setBackgroundResource(choice2[i]);
                 } else if (i >= choice1.length) {
-                    Intent it_main = new Intent(TestStartActivity.this, TestResultActivity.class);
-                    startActivity(it_main);
-                    finish();
+                    user_type = testing(answer);
+
+                    if(user_type != null) {
+                        try {
+                            new HttpUtil().execute();
+
+                            Log.v("testing result : ", pro_no);
+
+                            Intent it_main = new Intent(TestStartActivity.this, TestResultActivity.class);
+                            it_main.putExtra("id", userId);
+                            it_main.putExtra("pro_no", pro_no);
+                            it_main.putExtra("user_type", answer.toString());
+                            startActivity(it_main);
+                            finish();
+
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+
                 }
             }
         });
@@ -216,48 +272,54 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestStartActivity.this, HomeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestStartActivity.this, TestActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestStartActivity.this, ThemeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceBook(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestStartActivity.this, BookActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceDic(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestStartActivity.this, DicActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceMypage(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestStartActivity.this, MypageActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
@@ -267,8 +329,9 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
         Log.v("MenuItem : ", slideMenuItem.getName());
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
-            case ContentFragment.TEST:
                 return screenShotable;
+            case ContentFragment.TEST:
+                return replaceTest(screenShotable, position);
             case ContentFragment.HOME:
                 return replaceHome(screenShotable, position);
             case ContentFragment.THEME:
@@ -336,6 +399,64 @@ public class TestStartActivity extends AppCompatActivity implements ViewAnimator
                 count++;
         }
         return count;
+    }
+
+    public class HttpUtil extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+
+            StringBuffer response = null;
+
+            try {
+
+                String url = "http://knjas.or.kr:8084/alpick/AnalysisService?id=" + userId + "&user_type="+user_type;
+                URL obj = new URL(url);
+                HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
+
+                conn.setReadTimeout(10000);
+                conn.setConnectTimeout(15000);
+                conn.setRequestMethod("POST");
+                conn.setDoInput(true);
+
+                conn.connect();
+
+                int retCode = conn.getResponseCode();
+
+                InputStream is = conn.getInputStream();
+                BufferedReader bfr = new BufferedReader(new InputStreamReader(is));
+                String line;
+                response = new StringBuffer();
+
+                while ((line = bfr.readLine()) != null) {
+                    response.append(line);
+                    response.append('\r');
+                }
+                bfr.close();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+
+            return response.toString();
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            //res = response.toString();   //여기로 JSON값이 들어옴
+
+            String[] temp = result.split("---");
+
+            pro_no = temp[1];
+            anl_res = temp[0];
+
+        }
+
+
+
+
     }
 
 }

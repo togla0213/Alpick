@@ -19,6 +19,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -49,10 +51,16 @@ public class BookActivity extends AppCompatActivity implements ViewAnimator.View
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
+    ImageButton camera = null;
+
+    private String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
+
+        userId = getIntent().getStringExtra("id");
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
@@ -181,24 +189,27 @@ public class BookActivity extends AppCompatActivity implements ViewAnimator.View
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(BookActivity.this, HomeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(BookActivity.this, TestActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(BookActivity.this, ThemeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
@@ -212,16 +223,18 @@ public class BookActivity extends AppCompatActivity implements ViewAnimator.View
 
     private ScreenShotable replaceDic(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(BookActivity.this, DicActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceMypage(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(BookActivity.this, MypageActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
@@ -231,14 +244,14 @@ public class BookActivity extends AppCompatActivity implements ViewAnimator.View
         Log.v("MenuItem : ", slideMenuItem.getName());
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
-            case ContentFragment.DIC:
+            case ContentFragment.BOOK:
                 return screenShotable;
             case ContentFragment.HOME:
                 return replaceHome(screenShotable, position);
             case ContentFragment.TEST:
                 return replaceTest(screenShotable, position);
-            case ContentFragment.BOOK:
-                return replaceBook(screenShotable, position);
+            case ContentFragment.DIC:
+                return replaceDic(screenShotable, position);
             case ContentFragment.THEME:
                 return replaceTheme(screenShotable, position);
             case ContentFragment.MYPAGE:
@@ -320,7 +333,7 @@ public class BookActivity extends AppCompatActivity implements ViewAnimator.View
     }
     public void openCameraActivity(View b)
     {
-        Intent intent = new Intent(BookActivity.this, CameraActivity.class);
+        Intent intent = new Intent(BookActivity.this, barcode.class);
         startActivity(intent);
     }
 

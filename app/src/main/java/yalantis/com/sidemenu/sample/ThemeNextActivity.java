@@ -35,10 +35,14 @@ public class ThemeNextActivity extends AppCompatActivity implements ViewAnimator
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
+    private String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_theme_next);
+
+        userId = getIntent().getStringExtra("id");
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
@@ -149,48 +153,54 @@ public class ThemeNextActivity extends AppCompatActivity implements ViewAnimator
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(ThemeNextActivity.this, HomeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(ThemeNextActivity.this, TestActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(ThemeNextActivity.this, ThemeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceBook(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(ThemeNextActivity.this, BookActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceDic(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(ThemeNextActivity.this, DicActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceMypage(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(ThemeNextActivity.this, MypageActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
@@ -200,8 +210,9 @@ public class ThemeNextActivity extends AppCompatActivity implements ViewAnimator
         Log.v("MenuItem : ", slideMenuItem.getName());
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
-            case ContentFragment.THEME:
                 return screenShotable;
+            case ContentFragment.THEME:
+                return replaceTheme(screenShotable, position);
             case ContentFragment.HOME:
                 return replaceHome(screenShotable, position);
             case ContentFragment.TEST:

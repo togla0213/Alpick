@@ -22,6 +22,12 @@ public class Al_dictVO {
 
     }
 
+    public Al_dictVO(String product_no, String member_id, String score) {
+        this.product_no = product_no;
+        this.member_id = member_id;
+        this.score = score;
+    }
+
 
     public int getSequence_no() {
         return sequence_no;

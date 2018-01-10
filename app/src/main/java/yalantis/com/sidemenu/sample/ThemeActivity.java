@@ -41,10 +41,14 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
 
     private Button[] btn_menu = new Button[btn_menu_id.length];
 
+    private String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_theme);
+
+        userId = getIntent().getStringExtra("id");
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
@@ -70,11 +74,19 @@ public class ThemeActivity extends AppCompatActivity implements ViewAnimator.Vie
         }
 
         for (int i = 0; i < btn_menu.length; i++) {
+            final int index = i;
             btn_menu[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent it_main = new Intent(ThemeActivity.this, ThemeNextActivity.class);
-                    startActivity(it_main);
+                    if(index == 4) {
+                        Intent it_main = new Intent(ThemeActivity.this, ThemeNext2Activity.class);
+                        it_main.putExtra("id", userId);
+                        startActivity(it_main);
+                    } else {
+                        Intent it_main = new Intent(ThemeActivity.this, ThemeNextActivity.class);
+                        it_main.putExtra("id", userId);
+                        startActivity(it_main);
+                    }
                 }
             });
         }

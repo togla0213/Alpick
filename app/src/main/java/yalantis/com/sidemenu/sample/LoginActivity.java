@@ -42,9 +42,9 @@ public class LoginActivity extends AppCompatActivity {
     String user_pw = null;
     //String loginId, loginPwd;
 
-    ArrayList<Al_infoVO> info_list = null;
-    ArrayList<Al_dictVO> dic_list = null;
-    MemberVO mvo = null;
+    static ArrayList<Al_infoVO> info_list = null;
+    static ArrayList<Al_dictVO> dic_list = null;
+    static MemberVO mvo = null;
     String fjresponse = null;
     String nick = null;
 
@@ -99,18 +99,22 @@ public class LoginActivity extends AppCompatActivity {
                     user_id = Id.getText().toString();
                     user_pw = Pw.getText().toString();
 
-                    try {
-                        new HttpUtil().execute();
-                    } catch(Exception e) {
-                        e.printStackTrace();
-                    }
+                    if(user_id.equals("") || user_pw.equals("")) {
+                        Toast.makeText(getApplicationContext(), "아이디와 비밀번호를 확인해주세요!", Toast.LENGTH_SHORT).show();
+                    } else {
+
+                        try {
+                            new HttpUtil().execute();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
 
 //                    Log.v("userID : ", user_id);
 //                    Log.v("userPW : ", user_pw);
 //                    Log.v("DBPW : ", mvo.getPw());
 //                    Log.v("DBID : ", mvo.getId());
 
-                    if(info_list!=null) {
+                        if (info_list != null) {
 
 //                        if (user_id.equals(mvo.getId()) && user_pw.equals(mvo.getPw())) {
 //                            SharedPreferences auto = getSharedPreferences("auto", Activity.MODE_PRIVATE);
@@ -127,10 +131,11 @@ public class LoginActivity extends AppCompatActivity {
 //                            startActivity(intent);
 //                            finish();
 //                        }
-                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                        intent.putExtra("id", user_id);
-                        startActivity(intent);
-                        finish();
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            intent.putExtra("id", user_id);
+                            startActivity(intent);
+                            finish();
+                        }
                     }
                 }
             });

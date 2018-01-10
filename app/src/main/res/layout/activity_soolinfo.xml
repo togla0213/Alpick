@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEFEF"
+    android:backgroundTint="#FFEFEF"
+    tools:context="yalantis.com.sidemenu.sample.soolinfo">
+
+    <Button
+        android:id="@+id/okay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/tabTransparent"
+        android:text="확인" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="200dp"
+        android:layout_height="270dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        app:srcCompat="@color/tabTransparent" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/soolname"
+        android:layout_alignStart="@+id/soolname"
+        android:layout_below="@+id/soolname"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="1~5점을 매겨주세요"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/editText"
+        android:background="@null"
+        android:ems="10"
+        android:hint="간단한 평을 남겨주세요"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/soolname"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/img"
+        android:layout_alignStart="@+id/img"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+</RelativeLayout>

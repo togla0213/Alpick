@@ -18,9 +18,22 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="먹어본 술에 대해 평점을 내려주세요!"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -34,13 +47,27 @@
 
                 <RatingBar
                     android:id="@+id/bar_wine01"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                    style="?attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0"
                     android:isIndicator="false"
+                    android:max="5"
                     android:numStars="5"
-                    android:stepSize="1" />
+                    android:rating="0.0"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/img_wine02"
@@ -51,19 +78,24 @@
 
                 <RatingBar
                     android:id="@+id/bar_wine02"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                    style="?attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0"
                     android:isIndicator="false"
+                    android:max="5"
                     android:numStars="5"
-                    android:stepSize="1" />
+                    android:rating="0.0"
+                    android:stepSize="0.5" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -77,13 +109,27 @@
 
                 <RatingBar
                     android:id="@+id/bar_wine03"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                    style="?attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0"
                     android:isIndicator="false"
+                    android:max="5"
                     android:numStars="5"
-                    android:stepSize="1" />
+                    android:rating="0.0"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/img_wine04"
@@ -94,19 +140,24 @@
 
                 <RatingBar
                     android:id="@+id/bar_wine04"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                    style="?attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0"
                     android:isIndicator="false"
+                    android:max="5"
                     android:numStars="5"
-                    android:stepSize="1" />
+                    android:rating="0.0"
+                    android:stepSize="0.5" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -120,13 +171,27 @@
 
                 <RatingBar
                     android:id="@+id/bar_wine05"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                    style="?attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0"
                     android:isIndicator="false"
+                    android:max="5"
                     android:numStars="5"
-                    android:stepSize="1" />
+                    android:rating="0.0"
+                    android:stepSize="0.5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/img_wine06"
@@ -137,19 +202,24 @@
 
                 <RatingBar
                     android:id="@+id/bar_wine06"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                    style="?attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0"
                     android:isIndicator="false"
+                    android:max="5"
                     android:numStars="5"
-                    android:stepSize="1" />
+                    android:rating="0.0"
+                    android:stepSize="0.5" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -163,30 +233,16 @@
 
                 <RatingBar
                     android:id="@+id/bar_wine07"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                    style="?attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0"
                     android:isIndicator="false"
+                    android:max="5"
                     android:numStars="5"
-                    android:stepSize="1" />
-
-                <ImageView
-                    android:id="@+id/img_wine08"
-                    android:layout_width="10dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0008" />
-
-                <RatingBar
-                    android:id="@+id/bar_wine08"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:isIndicator="false"
-                    android:numStars="5"
-                    android:stepSize="1" />
+                    android:rating="0.0"
+                    android:stepSize="0.5" />
 
             </LinearLayout>
 
@@ -194,51 +250,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/img_wine09"
-                    android:layout_width="10dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0009" />
-
-                <RatingBar
-                    android:id="@+id/bar_wine09"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                <Button
+                    android:id="@+id/wine_pre"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:isIndicator="false"
-                    android:numStars="5"
-                    android:stepSize="1" />
+                    android:text="PRE" />
 
-                <ImageView
-                    android:id="@+id/img_wine10"
-                    android:layout_width="10dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/a03_0010" />
-
-                <RatingBar
-                    android:id="@+id/bar_wine10"
-                    style="@style/Widget.AppCompat.RatingBar.Indicator"
-                    android:layout_width="50dp"
+                <Button
+                    android:id="@+id/wine_next"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:isIndicator="false"
-                    android:numStars="5"
-                    android:stepSize="1" />
-
+                    android:text="NEXT" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/wine_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="290dp"
-                android:text="NEXT" />
 
         </LinearLayout>
 

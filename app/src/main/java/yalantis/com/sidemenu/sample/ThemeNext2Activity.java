@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ import yalantis.com.sidemenu.model.SlideMenuItem;
 import yalantis.com.sidemenu.sample.fragment.ContentFragment;
 import yalantis.com.sidemenu.util.ViewAnimator;
 
-public class TestActivity extends AppCompatActivity implements ViewAnimator.ViewAnimatorListener {
+public class ThemeNext2Activity extends AppCompatActivity implements ViewAnimator.ViewAnimatorListener {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
     private List<SlideMenuItem> list = new ArrayList<>();
@@ -35,26 +34,22 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
-    private Button btn_menu1;
-    private Button btn_menu2;
-    private Button btn_menu3;
-
     private String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.activity_theme_next2);
 
         userId = getIntent().getStringExtra("id");
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.test_frame, contentFragment)
+                .replace(R.id.themenext2_frame, contentFragment)
                 .commit();
-        drawerLayout = (DrawerLayout) findViewById(R.id.test_drawer_layout);
+        drawerLayout = (DrawerLayout) findViewById(R.id.themenext2_drawer_layout);
         drawerLayout.setScrimColor(Color.TRANSPARENT);
-        linearLayout = (LinearLayout) findViewById(R.id.test_left_drawer);
+        linearLayout = (LinearLayout) findViewById(R.id.themenext2_left_drawer);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,34 +61,6 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
         setActionBar();
         createMenuList();
         viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
-
-        btn_menu1 = (Button)findViewById(R.id.test_btn_menu1);
-        btn_menu2 = (Button)findViewById(R.id.test_btn_menu2);
-        btn_menu3 = (Button)findViewById(R.id.test_btn_menu3);
-
-        btn_menu1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it_main = new Intent(TestActivity.this, TestStartActivity.class);
-                startActivity(it_main);
-            }
-        });
-
-        btn_menu2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it_main = new Intent(TestActivity.this, TestStartActivity.class);
-                startActivity(it_main);
-            }
-        });
-
-        btn_menu3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it_main = new Intent(TestActivity.this, TestStartActivity.class);
-                startActivity(it_main);
-            }
-        });
     }
 
     private void createMenuList() {
@@ -115,7 +82,7 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
 
 
     private void setActionBar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.test_toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.themenext2_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -170,7 +137,7 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
 
     private ScreenShotable replaceFragment(ScreenShotable screenShotable, int topPosition) {
         this.res = this.res == R.drawable.content_music ? R.drawable.content_films : R.drawable.content_music;
-        View view = findViewById(R.id.test_frame);
+        View view = findViewById(R.id.themenext2_frame);
         int finalRadius = Math.max(view.getWidth(), view.getHeight());
         SupportAnimator animator = ViewAnimationUtils.createCircularReveal(view, 0, topPosition, 0, finalRadius);
         animator.setInterpolator(new AccelerateInterpolator());
@@ -179,12 +146,12 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
         //findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(getResources(), screenShotable.getBitmap()));
         animator.start();
         ContentFragment contentFragment = ContentFragment.newInstance();
-        getSupportFragmentManager().beginTransaction().replace(R.id.test_frame, contentFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.themenext2_frame, contentFragment).commit();
         return contentFragment;
     }
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(TestActivity.this, HomeActivity.class);
+        Intent it_main = new Intent(ThemeNext2Activity.this, HomeActivity.class);
         it_main.putExtra("id", userId);
         startActivity(it_main);
         finish();
@@ -193,14 +160,16 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(TestActivity.this, TestActivity.class);
+        Intent it_main = new Intent(ThemeNext2Activity.this, TestActivity.class);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(TestActivity.this, ThemeActivity.class);
+        Intent it_main = new Intent(ThemeNext2Activity.this, ThemeActivity.class);
         it_main.putExtra("id", userId);
         startActivity(it_main);
         finish();
@@ -209,7 +178,7 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private ScreenShotable replaceBook(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(TestActivity.this, BookActivity.class);
+        Intent it_main = new Intent(ThemeNext2Activity.this, BookActivity.class);
         it_main.putExtra("id", userId);
         startActivity(it_main);
         finish();
@@ -218,7 +187,7 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private ScreenShotable replaceDic(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(TestActivity.this, DicActivity.class);
+        Intent it_main = new Intent(ThemeNext2Activity.this, DicActivity.class);
         it_main.putExtra("id", userId);
         startActivity(it_main);
         finish();
@@ -227,7 +196,7 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
     }
 
     private ScreenShotable replaceMypage(ScreenShotable screenShotable, int topPosition) {
-        Intent it_main = new Intent(TestActivity.this, MypageActivity.class);
+        Intent it_main = new Intent(ThemeNext2Activity.this, MypageActivity.class);
         it_main.putExtra("id", userId);
         startActivity(it_main);
         finish();
@@ -240,12 +209,13 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
         Log.v("MenuItem : ", slideMenuItem.getName());
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
-            case ContentFragment.TEST:
                 return screenShotable;
-            case ContentFragment.HOME:
-                return replaceHome(screenShotable, position);
             case ContentFragment.THEME:
                 return replaceTheme(screenShotable, position);
+            case ContentFragment.HOME:
+                return replaceHome(screenShotable, position);
+            case ContentFragment.TEST:
+                return replaceTest(screenShotable, position);
             case ContentFragment.BOOK:
                 return replaceBook(screenShotable, position);
             case ContentFragment.DIC:
@@ -273,3 +243,4 @@ public class TestActivity extends AppCompatActivity implements ViewAnimator.View
         linearLayout.addView(view);
     }
 }
+

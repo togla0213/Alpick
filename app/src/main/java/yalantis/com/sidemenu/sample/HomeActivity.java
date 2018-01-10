@@ -41,10 +41,14 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
     private Button btn_theme;
     private Button btn_book;
 
+    private String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        userId = getIntent().getStringExtra("id");
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
@@ -72,6 +76,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
             @Override
             public void onClick(View v) {
                 Intent it_main = new Intent(HomeActivity.this, TestStartActivity.class);
+                it_main.putExtra("id", userId);
                 startActivity(it_main);
             }
         });
@@ -79,7 +84,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
         btn_theme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it_main = new Intent(HomeActivity.this, ThemeActivity.class);
+                Intent it_main = new Intent(HomeActivity.this, ThemeNext2Activity.class);
                 startActivity(it_main);
             }
         });
@@ -88,6 +93,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
             @Override
             public void onClick(View v) {
                 Intent it_main = new Intent(HomeActivity.this, BookActivity.class);
+                it_main.putExtra("id", userId);
                 startActivity(it_main);
             }
         });
@@ -189,6 +195,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(HomeActivity.this, TestActivity.class);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
 
         return screenShotable;
@@ -196,6 +203,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(HomeActivity.this, ThemeActivity.class);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
 
         return screenShotable;
@@ -203,6 +211,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
 
     private ScreenShotable replaceBook(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(HomeActivity.this, BookActivity.class);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
 
         return screenShotable;
@@ -210,6 +219,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
 
     private ScreenShotable replaceDic(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(HomeActivity.this, DicActivity.class);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
 
         return screenShotable;
@@ -217,6 +227,7 @@ public class HomeActivity extends AppCompatActivity implements ViewAnimator.View
 
     private ScreenShotable replaceMypage(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(HomeActivity.this, MypageActivity.class);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
 
         return screenShotable;

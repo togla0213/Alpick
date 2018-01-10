@@ -3,6 +3,7 @@ package yalantis.com.sidemenu.sample;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.provider.ContactsContract;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -35,10 +37,38 @@ public class TestResultActivity extends AppCompatActivity implements ViewAnimato
     private int res = R.drawable.content_music;
     private LinearLayout linearLayout;
 
+    private ImageView img_txt;
+
+    private String userId;
+    private String user_type;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_result);
+
+        img_txt = (ImageView)findViewById(R.id.test_result_txt);
+
+        userId = getIntent().getStringExtra("id");
+        user_type = getIntent().getStringExtra("user_type");
+
+        if(user_type.equals("ISTJ") || user_type.equals("ISTP")) {
+            img_txt.setImageResource(R.drawable.test_istj);
+        }else if(user_type.equals("ISFJ") || user_type.equals("ISFP")){
+            img_txt.setImageResource(R.drawable.test_isfj);
+        }else if(user_type.equals("INFP") || user_type.equals("INFJ")){
+            img_txt.setImageResource(R.drawable.test_infp);
+        }else if(user_type.equals("INTJ")||user_type.equals("INTP")){
+            img_txt.setImageResource(R.drawable.test_intp);
+        }else if(user_type.equals("ESTP") || user_type.equals("ESTJ")){
+            img_txt.setImageResource(R.drawable.test_estp);
+        }else if(user_type.equals("ESFP") || user_type.equals("ESFJ")){
+            img_txt.setImageResource(R.drawable.test_esfp);
+        }else if(user_type.equals("ENFP") || user_type.equals("ENFJ")){
+            img_txt.setImageResource(R.drawable.test_enfj);
+        } else {
+            img_txt.setImageResource(R.drawable.test_entj);
+        }
 
         contentFragment = ContentFragment.newInstance();
         getSupportFragmentManager().beginTransaction()
@@ -148,47 +178,54 @@ public class TestResultActivity extends AppCompatActivity implements ViewAnimato
 
     private ScreenShotable replaceHome(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestResultActivity.this, HomeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTest(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestResultActivity.this, TestActivity.class);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceTheme(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestResultActivity.this, ThemeActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceBook(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestResultActivity.this, BookActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceDic(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestResultActivity.this, DicActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
 
     private ScreenShotable replaceMypage(ScreenShotable screenShotable, int topPosition) {
         Intent it_main = new Intent(TestResultActivity.this, MypageActivity.class);
-        it_main.addFlags(it_main.FLAG_ACTIVITY_CLEAR_TOP);
+        it_main.putExtra("id", userId);
         startActivity(it_main);
+        finish();
 
         return screenShotable;
     }
@@ -198,8 +235,9 @@ public class TestResultActivity extends AppCompatActivity implements ViewAnimato
         Log.v("MenuItem : ", slideMenuItem.getName());
         switch (slideMenuItem.getName()) {
             case ContentFragment.CLOSE:
-            case ContentFragment.TEST:
                 return screenShotable;
+            case ContentFragment.TEST:
+                return replaceTest(screenShotable, position);
             case ContentFragment.HOME:
                 return replaceHome(screenShotable, position);
             case ContentFragment.THEME:
